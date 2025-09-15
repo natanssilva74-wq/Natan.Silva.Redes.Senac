@@ -1,5 +1,5 @@
 # revisão da materia. aqui foi adicionado while para cadasrar os produtos indefinidamente
-# esse código é uma releitura do anterior (20250908) com algumas melhorias
+# esse código é uma releitura do anterior (20250908.1) com algumas melhorias
 
 lista = []
 
