@@ -385,7 +385,8 @@ class ListarFrame(ctk.CTkFrame):
             selected_color="#3a3a6a",
             selected_hover_color="#4a4a8a",
             unselected_color="#17171f",
-            text_color="#a0a0c0",                                           command=self.refresh
+            text_color="#a0a0c0",
+            command=self.refresh
             )
         self.filtro.set("Todas")
         self.filtro.grid(row=1, column=0, sticky="w", pady=(0, 16))
@@ -419,8 +420,9 @@ class ListarFrame(ctk.CTkFrame):
             if not tarefas:
                 ctk.CTkLabel(
                     self.scroll,
-                    text="Nenhuma tarefa encontrada.",                             text_color="#555570", font=ctk.CTkFont(size=13)
-                    ).grid(padx=20, pady=30)
+                    text="Nenhuma tarefa encontrada.",
+                    text_color="#555570", font=ctk.CTkFont(size=13)
+                ).grid(padx=20, pady=30)
             else:
                 for t in tarefas:
                     self._row(t)
@@ -444,8 +446,9 @@ class ListarFrame(ctk.CTkFrame):
         dot = ctk.CTkLabel(
             row,
             text="●",
-            text_color=cor if not t['ok'] else "#444458",                           font=ctk.CTkFont(size=16)
-            )
+            text_color=cor if not t['ok'] else "#444458",
+            font=ctk.CTkFont(size=16)
+        )
         dot.grid(row=0, column=0, rowspan=2, padx=(16, 10), pady=14)
 
         titulo_text = t['titulo'] if not t['ok'] else f"✓ {t['titulo']}"
@@ -454,7 +457,8 @@ class ListarFrame(ctk.CTkFrame):
         ctk.CTkLabel(
             row,
             text=titulo_text,
-            font=ctk.CTkFont(size=13, weight="bold"),                     text_color=titulo_color, anchor="w"
+            font=ctk.CTkFont(size=13, weight="bold"),
+            text_color=titulo_color, anchor="w"
             ).grid(row=0, column=1, sticky="w", pady=(12, 2))
 
 #INFORMAÇOES MENORES (DISCIPLINA, PRIORIDADE, DATA)
@@ -609,7 +613,8 @@ class RelatoriosFrame(ctk.CTkFrame):
                     ctk.CTkLabel(
                         row,
                         text=t['titulo'],
-                        font=ctk.CTkFont(size=13, weight="bold"),                                 text_color="#F44336",
+                        font=ctk.CTkFont(size=13, weight="bold"),
+                        text_color="#F44336",
                         anchor="w"
                     ).grid(row=0, column=0, sticky="w", padx=16, pady=(10, 2))
 
