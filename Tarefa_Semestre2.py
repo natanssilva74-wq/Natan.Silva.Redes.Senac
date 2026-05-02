@@ -11,7 +11,7 @@ ctk.set_default_color_theme("blue")
 
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'root',
+    'user': 'natan',
     'password': '1234',
     'database': 'gestao_tarefas'
 }
@@ -127,7 +127,7 @@ class App(ctk.CTk):
             frame.grid(row=0, column=0, sticky="nsew", padx=32, pady=24)
 
 #ATUALIZA O DESTAQUE DOS BOTÕES
-  def show_frame(self, name):
+    def show_frame(self, name):
         for key, btn in self.nav_buttons.items():
             if key == name:
                 btn.configure(fg_color="#23233a", text_color="#e8d5b0")
